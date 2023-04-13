@@ -20,11 +20,30 @@ window.onload = function () {
     let unitlength;
     let unitwidth;
     let beanradius;
+    let mobileuser;
 
+    checkMobile();
     resizeApp();
     animate();
 }
 
+
+function checkMobile () {
+    myfunction() {
+         if (navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i)) {
+            mobileuser = true ;
+         } else {
+            mobileuser = false ;
+         }
+    
+    
+}
 
 function resizeApp () {
 
@@ -160,6 +179,7 @@ function animate() {
 
     draw();
 
+    if (mobileuser == false) {
     for (let i = 0; i < 180; ++i) {
         let beancolour = "hsl(" + Math.random() * 360 + ", 40%, 65%)"
         addCircle({
@@ -196,7 +216,7 @@ function animate() {
             }
         });
     }
-
+    }
 
     for (let i = 0; i < 120; ++i) {
         let beancolour = "hsl(" + Math.random() * 360 + ", 40%, 65%)"
