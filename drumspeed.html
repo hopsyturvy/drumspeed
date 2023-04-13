@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="drumspeed.css">
+
+</head>
+
+<body>
+    <div id="app-container">
+
+        <div id="appwindow">
+        </div>
+        
+        <div id="controls">
+            <div class="slider-text-container">
+                <div class="slider-text" id="slow-text">
+                    Too slow
+                </div>
+                <div class="slider-text" id="medium-text">
+                    Optimal range
+                </div>
+                <div class="slider-text" id="fast-text">
+                    Too fast
+                </div>
+            </div>
+
+            <div class="range-slider">
+                <div class='slider-track'>
+                    <div class='slider-selection' id='slider-selection' style = "width: 0%;"></div>
+                    <div class='slider-handle' id='slider-handle' style = "left: 0%;"></div>
+                </div>
+
+                <input type="range" min="0" max="100" value="0" class="slider-input" id="speedslider">
+                
+            </div>
+
+            <div id="explanation-text">
+                Drag the slider to change drum speed
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="matter.min.js"></script>
+    <script src="drumspeed.js"></script>
+
+</body>
+
+</html>
