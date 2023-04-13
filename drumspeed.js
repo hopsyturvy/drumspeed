@@ -29,7 +29,6 @@ window.onload = function () {
 
 
 function checkMobile () {
-    myfunction() {
          if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/webOS/i)
          || navigator.userAgent.match(/iPhone/i)
